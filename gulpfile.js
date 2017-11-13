@@ -12,9 +12,9 @@ gulp.task('serve', ['build-jekyll-dev', 'sass', 'images', 'fonts'], function() {
         server: "./docs"
     });
 
-    gulp.watch("src/scss/**/*.scss", ['sass']).on('change', browserSync.reload);
+    gulp.watch("src/scss/**/*.*", ['sass']).on('change', browserSync.reload);
     gulp.watch("src/images/**/*.*", ['images']).on('change', browserSync.reload);
-    gulp.watch("src/images/**/*.*", ['fonts']).on('change', browserSync.reload);
+    gulp.watch("src/fonts/**/*.*", ['fonts']).on('change', browserSync.reload);
     gulp.watch("src/jekyll/**/*.html", ['build-jekyll-dev']).on('change', browserSync.reload);
 });
 
@@ -31,8 +31,8 @@ gulp.task('sass', function() {
 
 // Copy fonts in the production folder
 gulp.task('fonts', function() {
-    return gulp.src("src/fonts/**/*.*")
-        .pipe(gulp.dest("docs/fonts/"))
+    return gulp.src("src/fonts/*")
+        .pipe(gulp.dest("docs/fonts"))
         .pipe(browserSync.stream());
 });
 

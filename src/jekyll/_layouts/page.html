@@ -3,7 +3,7 @@ layout: page
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100%;">
 
 <head>
     <meta charset="utf-8">
@@ -18,44 +18,19 @@ layout: page
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="http://example.com/feed.xml">
 </head>
 
-<body style="max-width: 1440px; margin: 0 auto;">
+<body style="height: 100%; margin: 0 auto; display: flex; flex-direction: column;">
 
 	{% include header.html %}
 
-    {% include sidebar.html %}
+    <section class="" style="flex: 1;">
+        {% if page.title %}
+            <h3 class="page-title mt-4 my-lg-2">
+                {{page.title}}
+            </h3> 
+        {% endif %}
+        {{ content }}
 
-        <section class="content collapse-mobile">
-            <div class="m-2 m-lg-4">
-                {% if page.title %}
-                    <h3 class="page-title mt-4 my-lg-2">
-                        {% if page.titleIcon %}
-                            <img class="icon-lg mb-2 page-title-icon" src="{{site.baseurl}}/images/icon-{{page.titleIcon}}.jpg" />
-                        {% endif %}
-                        {{page.title}}
-                    </h3> 
-                {% endif %}
-                {% if page.subTitle %}
-                    <div class="row align-items-center my-4">
-                        <span class="text-center col-12">
-                            <h4 style="border-bottom: 1px rgba(168, 168, 168, 0.25) solid; color: #464a4c;" class="page-subtitle mx-2 py-2">{{page.subTitle}}</h4>
-                        </span>
-                        <span class="col-6 text-left">
-                            {% if page.navPrev %}
-                                <a href="{{site.baseurl}}{{page.navPrevLink}}" style="white-space: nowrap"><img class="icon mx-2" src="{{site.baseurl}}/images/icon-arrow-left.svg" /><b>{{page.navPrev}}</b></a>
-                            {% endif %}
-                        </span>
-                        <span class="col-6 text-right">
-                            {% if page.navNext %}
-                                <a href="{{site.baseurl}}{{page.navNextLink}}" style="white-space: nowrap"><b>{{page.navNext}}</b><img class="icon mx-2" src="{{site.baseurl}}/images/icon-arrow-right.svg" /></a>
-                            {% endif %}
-                        </span>
-                    </div>
-                {% endif %}
-                <div class="my-4 px-2">
-                    {{ content }}
-                </div>
-            </div>
-        </section>
+    </section>
 
 	{% include footer.html %}
 </body>
