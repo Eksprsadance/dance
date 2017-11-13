@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="canonical" href="http://example.com/">
     <link rel="alternate" type="application/rss+xml" title="Dancing Studio" href="http://example.com/feed.xml">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body style="height: 100%; margin: 0 auto; display: flex; flex-direction: column;">
@@ -48,6 +49,16 @@
 			<span>Created by Vortex &#169 (2017)</span>
 		</div>
 	</section>
+
+	<script>
+		setInterval(function() {
+			var $curr = $('#slider1 input[type=radio]:checked');  
+			var $next = $curr.next('input');
+			if(!$next.length) $next = $('#slider1 input[type=radio]').first();
+			$next.prop('checked', true);
+			
+		}, 10000);
+	</script>
 </footer>
 </body>
 </html>
