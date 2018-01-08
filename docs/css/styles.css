@@ -2337,7 +2337,8 @@
   text-align: left;
   position: relative;
   margin-bottom: 22px;
-  max-width: 100%; }
+  max-width: 100%;
+  overflow: hidden; }
 
 .csslider > input {
   display: none; }
@@ -2517,6 +2518,11 @@
   -o-transition: box-shadow 0.15s, margin 0.15s;
   -webkit-transition: box-shadow 0.15s, margin 0.15s;
   transition: box-shadow 0.15s, margin 0.15s; }
+
+@media (max-width: 768px) {
+  .csslider > .arrows label {
+    padding: 10px;
+    box-shadow: inset 2px -2px 0 1px #3a3a3a; } }
 
 .csslider > .arrows label:hover {
   box-shadow: inset 4px -4px 0 3px #71ad37;
@@ -5443,6 +5449,10 @@ a.text-dark:focus, a.text-dark:hover {
 .invisible {
   visibility: hidden !important; }
 
+@media (max-width: 768px) {
+  .lead-description {
+    font-size: 1rem; } }
+
 .icon {
   height: 1rem;
   width: 1rem; }
@@ -5466,6 +5476,6 @@ header {
       font-size: 0.875rem; } }
 
 footer {
-  height: 4em;
+  min-height: 2em;
   background: #343a40;
   color: #f8f9fa; }
