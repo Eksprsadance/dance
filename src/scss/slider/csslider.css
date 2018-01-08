@@ -98,6 +98,7 @@
 }
 .csslider > .navigation > div {
   margin-left: -100%;
+  opacity: 0.25;
 }
 .csslider > .navigation label {
   position: relative;
@@ -157,12 +158,24 @@
   top: 50%;
   width: 100%;
   height: 26px;
-  padding: 0 31px;
   z-index: 1;
-  opacity: 0.75;
+  padding: 0 40px;
+  opacity: 0.125;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
+  -moz-transition: opacity 0.25s;
+  -o-transition: opacity 0.25s;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+
+.csslider:hover > .arrows {
+  opacity: 0.5;
+  -moz-transition: all ease-in 0.25s;
+  -o-transition: all ease-in 0.25s;
+  -webkit-transition: all ease-in 0.25s;
+  transition: all ease-in 0.25s;
 }
 .csslider > .arrows label {
   display: none;
@@ -180,6 +193,7 @@
   box-shadow: inset 4px -4px 0 3px #71ad37;
   margin: 0 0px;
 }
+
 .csslider > .arrows label:before {
   content: '';
   position: absolute;

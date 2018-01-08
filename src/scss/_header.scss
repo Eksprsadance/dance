@@ -8,4 +8,10 @@ header {
       color: $gray-500;
     }
   }
+
+  @media (max-width: 768px) {
+    nav {
+      font-size: $font-size-sm;
+    }
+  }
 }
