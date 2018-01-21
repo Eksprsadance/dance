@@ -68,10 +68,10 @@
   font-size: 15px;
   font-size: initial;
   line-height: normal;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s ease-out;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s ease-out;
+  -webkit-transition: all 1s;
+  transition: all 1s;
   vertical-align: top;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
