@@ -9,6 +9,7 @@
   margin-bottom: 22px;
   max-width: 100%;
   overflow: hidden;
+  background: #f8f9fa;
 }
 .csslider > input {
   display: none;
@@ -50,7 +51,7 @@
   z-index: 1;
   font-size: 0;
   line-height: 0;
-  background-color: #fff;
+  background-color: #f4f6f8;
 /*  border: 10px solid #3a3a3a; */
   margin: 0 auto;
   padding: 0;

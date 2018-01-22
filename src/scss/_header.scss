@@ -1,9 +1,13 @@
 header {
-  background: rgba(250,250,250,0.5);
+  
   width: 100%;
   height: 8em;
   position: absolute;
   z-index: $zindex-sticky;
+
+  > div {
+    background: rgba(250,250,250,0.5);
+  }
 
   .logo-contact {
     z-index: $zindex-sticky;

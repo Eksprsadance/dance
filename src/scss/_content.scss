@@ -1,3 +1,21 @@
+.content {
+  p {
+    font-size: $font-size-lg;
+  }
+
+  .service {
+    height: 9em;
+
+    .thumbnail {
+      min-width: 9em;
+    }
+
+    a {
+      color: $black;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .lead-description {
     font-size: $font-size-base;

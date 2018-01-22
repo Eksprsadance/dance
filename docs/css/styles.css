@@ -2338,7 +2338,8 @@
   position: relative;
   margin-bottom: 22px;
   max-width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  background: #f8f9fa; }
 
 .csslider > input {
   display: none; }
@@ -2380,7 +2381,7 @@
   z-index: 1;
   font-size: 0;
   line-height: 0;
-  background-color: #fff;
+  background-color: #f4f6f8;
   /*  border: 10px solid #3a3a3a; */
   margin: 0 auto;
   padding: 0;
@@ -5449,6 +5450,16 @@ a.text-dark:focus, a.text-dark:hover {
 .invisible {
   visibility: hidden !important; }
 
+.content p {
+  font-size: 1.25rem; }
+
+.content .service {
+  height: 9em; }
+  .content .service .thumbnail {
+    min-width: 9em; }
+  .content .service a {
+    color: #000; }
+
 @media (max-width: 768px) {
   .lead-description {
     font-size: 1rem; } }
@@ -5466,11 +5477,12 @@ a.text-dark:focus, a.text-dark:hover {
   width: 2rem; }
 
 header {
-  background: rgba(250, 250, 250, 0.5);
   width: 100%;
   height: 8em;
   position: absolute;
   z-index: 1020; }
+  header > div {
+    background: rgba(250, 250, 250, 0.5); }
   header .logo-contact {
     z-index: 1020;
     font-weight: 700;
