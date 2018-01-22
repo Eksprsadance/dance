@@ -1,4 +1,11 @@
-.content {
+.main {
+
+  .content {
+    margin-top: -2.5em;
+    max-width: 991px; 
+    background-color: $white;
+  }
+
   p {
     font-size: $font-size-lg;
   }
@@ -19,5 +26,27 @@
 @media (max-width: 768px) {
   .lead-description {
     font-size: $font-size-base;
+  }
+}
+
+//slider 
+
+.slider {
+  .slide1 {
+    transition: .5s all ease-in;
+  }
+
+  .slide2,
+  .slide3,
+  .slide4 {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .5s all ease-in;
+
+    &.active {
+      opacity: 1;
+      transition: .5s all ease-in;
+    }
   }
 }

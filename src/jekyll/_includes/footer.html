@@ -6,12 +6,28 @@
 	</section>
 
 	<script>
+		var i = 2;
+		var mouseOver = false;
+
+		mouseOverStatus = function() {
+				mouseOver = true;
+		}
+
+		mouseOutStatus = function() {
+				mouseOver = false;
+		}
+		
 		setInterval(function() {
-			var $curr = $('#slider1 input[type=radio]:checked');  
-			var $next = $curr.next('input');
-			if(!$next.length) $next = $('#slider1 input[type=radio]').first();
-			$next.prop('checked', true);
-			
+			if (i <= 4 && !mouseOver) {
+				document.querySelector(".slide" + i).classList.add('active');
+				i++;
+			} else if (i > 4 && !mouseOver) {
+				i = 2;
+				document.querySelector(".slide2").classList.remove('active');
+				document.querySelector(".slide3").classList.remove('active');
+				document.querySelector(".slide4").classList.remove('active');
+			}
 		}, 10000);
+
 	</script>
 </footer>

@@ -17,9 +17,9 @@
 
 <body style="height: 100%; margin: 0 auto; display: flex; flex-direction: column; overflow-x: hidden; background-color: #f4f6f8;">
 
-	<header class="">
-    <div class="row mx-auto justify-content-between" style="max-width: 991px; overflow-x: hidden;">
-      <div class="col-auto shrink pl-2 align-self-center text-md-left text-center">
+	<header>
+    <div class="row mx-auto justify-content-between" style="max-width: 991px;">
+      <div class="col-auto shrink py-2 pl-2 align-self-center text-md-left text-center">
         <img class="m-2 p-md-2" style="height: 100%; max-height: 6em;" src="/images/logo-dance.png" />
         <div class="position-absolute logo-contact">
           <span>CALL: 917.916.5400</span>
@@ -28,202 +28,210 @@
         </div>
       </div>
       <nav class="m-md-2 pr-2 mx-auto col list-unstyled d-flex flex-row align-items-center justify-content-center justify-content-lg-end text-center">
-        <li class="d-flex flex-column p-3"><a>Home</a></li>
-        <li class="d-flex flex-column p-3"><a>About Us</a></li>
-        <li class="d-flex flex-column p-3"><a>Our Team</a></li>
-        <li class="d-flex flex-column p-3"><a>Services</a></li>
-        <li class="d-flex flex-column p-3"><a>Contact Us</a></li>
+        <li class="d-flex flex-column p-3"><a href="/">Home</a></li>
+        <li class="d-flex flex-column p-3"><a href="#about">About Us</a></li>
+        <li class="d-flex flex-column p-3"><a href="#team">Our Team</a></li>
+        <li class="d-flex flex-column p-3"><a href="#services">Services</a></li>
+        <li class="d-flex flex-column p-3"><a href="#contact">Contact Us</a></li>
       </nav>
     </div>
 </header>
 
-    <section class="content" style="flex: 1;">
+    <section class="main" style="flex: 1;">
         
-        <div id="slider1" class="csslider infinity">
-  <input type="radio" name="slides" id="slides_1" checked />
-  <input type="radio" name="slides" id="slides_2" />
-  <input type="radio" name="slides" id="slides_3" />
-  <input type="radio" name="slides" id="slides_4" />
-  <ul class="text-center">
-    <li><img style="max-width: 100%;" src="/images/ballroom.jpg" /></li>
-    <li><img style="max-width: 100%;"src="/images/special-occasion.jpg" /></li>
-    <li><img style="max-width: 100%;" src="/images/kids-ballroom.jpg" /></li>
-    <li><img style="max-width: 100%;" src="/images/intensive-fitness.jpg" /></li>
-  </ul>
-  <div class="arrows">
-    <label for="slides_1"></label>
-    <label for="slides_2"></label>
-    <label for="slides_3"></label>
-    <label for="slides_4"></label>
+        <div class="slider text-center mx-auto position-relative" style="max-width: 991px;" onmouseover="mouseOverStatus()" onmouseout="mouseOutStatus()">
+  <div class="slide1 active">
+    <img style="max-width: 100%;" src="/images/ballroom.jpg" />
+    <h4 class="position-absolute" style="right: 2em; bottom: 1em; color:white;"><i>This is a description box for the first slide!</i></h4>
   </div>
-  <div class="navigation">
-    <div>
-      <label for="slides_1"></label>
-      <label for="slides_2"></label>
-      <label for="slides_3"></label>
-      <label for="slides_4"></label>
-    </div>
+  <div class="position-absolute slide2">
+    <img style="max-width: 100%;" src="/images/special-occasion.jpg" />
+    <h4 class="position-absolute" style="right: 2em; bottom: 1em; color:blue;"><i>This is a description box for the second slide!</i></h4>
+  </div>
+  <div class="position-absolute slide3">
+    <img style="max-width: 100%;" src="/images/kids-ballroom.jpg" />
+    <h4 class="position-absolute" style="right: 2em; bottom: 1em; color:pink;"><i>This is a description box for the third slide!</i></h4>
+  </div>
+  <div class="position-absolute slide4">
+    <img style="max-width: 100%;" src="/images/intensive-fitness.jpg" />
+    <h4 class="position-absolute" style="right: 2em; bottom: 1em; color:red;"><i>This is a description box for the forth slide!</i></h4>
   </div>
 </div>
-<section style="max-width: 991px;" class="mx-auto">
-  <h5 class="text-center lead-description text-uppercase">
-    <b>About Us</b>
-  </h5>
-  <p class="">
-    Eksprsa Dance is a leading dance school in Long Island City, teaching a diverse variety of
-    ballroom and Latin dance, including American style and International style, both social and
-    competitive levels. We work with beginners and advanced dancers of all ages, and offer an adult
-    and children`s programs, as well as customized wedding dance and intensive fitness programs.
-    Our lessons are taught by the internationally acclaimed dance instructors, including active
-    competitive professional dancers, award-winning performers and major TV show participants.
-  </p>
 
-  <h5 class="text-center lead-description text-uppercase">
-    <b>Our Team</b>
-  </h5>
-  <h5>EKATERINA SIDOROVA</h5>
-  <h6 class="m-0">
-    <p>
-      The Owner and President of Eksprsa Dance.
+<section class="content mx-auto py-4">
+  <div class="mx-4">
+    <h5 class="text-center lead-description text-uppercase">
+      <b>
+        <a name="about">About Us</a>
+      </b>
+    </h5>
+    <p class="">
+      Eksprsa Dance is a leading dance school in Long Island City, teaching a diverse variety of
+      ballroom and Latin dance, including American style and International style, both social and
+      competitive levels. We work with beginners and advanced dancers of all ages, and offer an adult
+      and children`s programs, as well as customized wedding dance and intensive fitness programs.
+      Our lessons are taught by the internationally acclaimed dance instructors, including active
+      competitive professional dancers, award-winning performers and major TV show participants.
     </p>
-  </h6>
 
-  <h5>NIKITA MALAKHOV</h5>
-  <h6 class="m-0">
-    <p>
-      2008 National Canadian Champion and Vice Champion at the 2009 USA Dance National
-      Championships and Top 16 male dancer on <b><i>“So You Think You Can Dance”</i></b>.
-    </p>
-  </h6>
+    <h5 class="text-center lead-description text-uppercase">
+      <b>
+        <a name="team">Our Team</a>
+      </b>
+    </h5>
+    <h5>EKATERINA SIDOROVA</h5>
+    <h6 class="m-0">
+      <p>
+        The Owner and President of Eksprsa Dance.
+      </p>
+    </h6>
 
-  <h5>NADEJZDA VLASOVA</h5>
-  <h6 class="m-0">
-    <p>
-      Currently Top 10 U.S. Profesional latin dancer, featured as a lead dancer in the movie “Lucky:
-      No Time For Love”, and featured on the television program <b><i>“Dancing with the Stars”</i></b>.
-    </p>
-  </h6>
-  <h5>ANTON DOLMANSKIY</h5>
-  <h6 class="m-0">
-    <p>
-      Former United States Amateur Ballroom Champion and currently high-ranked competing professional.
-    </p>
-  </h6>
+    <h5>NIKITA MALAKHOV</h5>
+    <h6 class="m-0">
+      <p>
+        2008 National Canadian Champion and Vice Champion at the 2009 USA Dance National
+        Championships and Top 16 male dancer on <b><i>“So You Think You Can Dance”</i></b>.
+      </p>
+    </h6>
 
-  <h5 class="text-center lead-description text-uppercase">
-    <b>Services</b>
-  </h5>
+    <h5>NADEJZDA VLASOVA</h5>
+    <h6 class="m-0">
+      <p>
+        Currently Top 10 U.S. Profesional latin dancer, featured as a lead dancer in the movie “Lucky:
+        No Time For Love”, and featured on the television program <b><i>“Dancing with the Stars”</i></b>.
+      </p>
+    </h6>
+    <h5>ANTON DOLMANSKIY</h5>
+    <h6 class="m-0">
+      <p>
+        Former United States Amateur Ballroom Champion and currently high-ranked competing professional.
+      </p>
+    </h6>
 
-  <div class="row align-items-center service mx-0 mt-2">
-    <div class="col-auto border border-secondary d-flex align-items-center justify-content-center h-100 text-center m-auto thumbnail px-0">
-      <img style="max-width: 100%;" src="/images/thumb.jpg" />
-    </div>
-    <div class="col border border-secondary h-100 ml-2">
-      <h5 class="my-2 underline">
-        <b>
-          <a href="#">PRIVATE DANCE LESSONS</a>
-        </b>
-      </h5>
-      <p>
-        The most effective way to learn how to dance. During your private lesson you will receive
-        personalized instruction focused on your needs. Our private lesson is 45 minutes long, for one or two
-        people to attend.
-      </p>
-    </div>
-  </div>
-  <div class="row align-items-center service mx-0 mt-2">
-    <div class="col-auto border border-secondary d-flex align-items-center justify-content-center h-100 text-center m-auto thumbnail px-0">
-      <img style="max-width: 100%;" src="/images/thumb.jpg" />
-    </div>
-    <div class="col border border-secondary h-100 ml-2">
-      <h5 class="my-2 underline">
-        <b>
-          <a href="#">GROUP CLASSES</a>
-        </b>
-      </h5>
-      <p>
-        A great way to learn different dance styles, pick up fun moves, meet new friends and get in shape in a
-        fun group atmosphere. You will have an opportunity to dance with various partners throughout the
-        class. The group class is 55 minutes long. Classes are for beginners through advanced levels.
-      </p>
-    </div>
-  </div>
-  <div class="row align-items-center service mx-0 mt-2">
-    <div class="col-auto border border-secondary d-flex align-items-center justify-content-center h-100 text-center m-auto thumbnail px-0">
-      <img style="max-width: 100%;" src="/images/thumb.jpg" />
-    </div>
-    <div class="col border border-secondary h-100 ml-2">
-      <h5 class="my-2 underline">
-        <b>
-          <a href="#">SPECIAL OCCASION DANCE LESSONS</a>
-        </b>
-      </h5>
-      <p>
-        Dancing is fun and social, and builds poise and confidence. Out instructors will help you to look and
-        feel great for any special event – anything from wedding to a black tie gala, even if you have never
-        danced before.
-      </p>
-    </div>
-  </div>
-  <div class="row align-items-center service mx-0 mt-2">
-    <div class="col-auto border border-secondary d-flex align-items-center justify-content-center h-100 text-center m-auto thumbnail px-0">
-      <img style="max-width: 100%;" src="/images/thumb.jpg" />
-    </div>
-    <div class="col border border-secondary h-100 ml-2">
-      <h5 class="my-2 underline">
-        <b>
-          <a href="#">CHILDRENS BALLROOM</a>
-        </b>
-      </h5>
-      <p>
-        Ballroom dancing for children is a great way to develop am important skills as discipline and focus,
-        grace and esthetics and to improve social and communication skills. Addition to fun, children can
-        compete in an effort to build artistic and performing skills. Private and group classes are available.
-      </p>
-    </div>
-  </div>
-  <div class="row align-items-center service mx-0 mt-2">
-    <div class="col-auto border border-secondary d-flex align-items-center justify-content-center h-100 text-center m-auto thumbnail px-0">
-      <img style="max-width: 100%;" src="/images/thumb.jpg" />
-    </div>
-    <div class="col border border-secondary h-100 ml-2">
-      <h5 class="my-2 underline">
-        <b>
-          <a href="#">EKSPRSA INTENSIVE FITNESS</a>
-        </b>
-      </h5>
-      <p>
-        A signature cardio workout group class with elements of Latin and Modern dance styles. This class is
-        sure to burn calories and put a smile on your face. The class is 55 minutes long.
-      </p>
-    </div>
-  </div>
-  <div class="row align-items-center service mx-0 mt-2">
-    <div class="col-auto border border-secondary d-flex align-items-center justify-content-center h-100 text-center m-auto thumbnail px-0">
-      <img style="max-width: 100%;" src="/images/thumb.jpg" />
-    </div>
-    <div class="col border border-secondary h-100 ml-2">
-      <h5 class="my-2 underline">
-        <b>
-          <a href="#">SOCIAL PRACTICE PARTY</a>
-        </b>
-      </h5>
-      <p>
-        We play all ballroom and latin music including: Salsa, Merenge, Swing, Hustle, Tango, Waltz,
-        Foxtrot, Cha-Cha- Cha and more. The best way to practice and celebrate what you learn. Stay tuned
-        for news about our next party.
-      </p>
-    </div>
-  </div>
+    <h5 class="text-center lead-description text-uppercase">
+      <b>
+        <a name="services">Services</a>
+      </b>
+    </h5>
 
-  <h5 class="text-center lead-description text-uppercase">
-    <b>Contact</b>
-  </h5>
-  <p class="">
-    <span>CALL: 917.916.5400</span>
-    <br />
-    <span>EMAIL: exprsa@gmail.com</span>
-  </p>
+    <div class="row align-items-center service mx-0 mt-2">
+      <div class="col-auto border border-secondary d-flex align-items-center justify-content-center h-100 text-center m-auto thumbnail px-0">
+        <img style="max-width: 100%;" src="/images/thumb.jpg" />
+      </div>
+      <div class="col border border-secondary h-100 ml-2">
+        <h5 class="my-2 underline">
+          <b>
+            <a href="#">PRIVATE DANCE LESSONS</a>
+          </b>
+        </h5>
+        <p>
+          The most effective way to learn how to dance. During your private lesson you will receive
+          personalized instruction focused on your needs. Our private lesson is 45 minutes long, for one or two
+          people to attend.
+        </p>
+      </div>
+    </div>
+    <div class="row align-items-center service mx-0 mt-2">
+      <div class="col-auto border border-secondary d-flex align-items-center justify-content-center h-100 text-center m-auto thumbnail px-0">
+        <img style="max-width: 100%;" src="/images/thumb.jpg" />
+      </div>
+      <div class="col border border-secondary h-100 ml-2">
+        <h5 class="my-2 underline">
+          <b>
+            <a href="#">GROUP CLASSES</a>
+          </b>
+        </h5>
+        <p>
+          A great way to learn different dance styles, pick up fun moves, meet new friends and get in shape in a
+          fun group atmosphere. You will have an opportunity to dance with various partners throughout the
+          class. The group class is 55 minutes long. Classes are for beginners through advanced levels.
+        </p>
+      </div>
+    </div>
+    <div class="row align-items-center service mx-0 mt-2">
+      <div class="col-auto border border-secondary d-flex align-items-center justify-content-center h-100 text-center m-auto thumbnail px-0">
+        <img style="max-width: 100%;" src="/images/thumb.jpg" />
+      </div>
+      <div class="col border border-secondary h-100 ml-2">
+        <h5 class="my-2 underline">
+          <b>
+            <a href="#">SPECIAL OCCASION DANCE LESSONS</a>
+          </b>
+        </h5>
+        <p>
+          Dancing is fun and social, and builds poise and confidence. Out instructors will help you to look and
+          feel great for any special event – anything from wedding to a black tie gala, even if you have never
+          danced before.
+        </p>
+      </div>
+    </div>
+    <div class="row align-items-center service mx-0 mt-2">
+      <div class="col-auto border border-secondary d-flex align-items-center justify-content-center h-100 text-center m-auto thumbnail px-0">
+        <img style="max-width: 100%;" src="/images/thumb.jpg" />
+      </div>
+      <div class="col border border-secondary h-100 ml-2">
+        <h5 class="my-2 underline">
+          <b>
+            <a href="#">CHILDRENS BALLROOM</a>
+          </b>
+        </h5>
+        <p>
+          Ballroom dancing for children is a great way to develop am important skills as discipline and focus,
+          grace and esthetics and to improve social and communication skills. Addition to fun, children can
+          compete in an effort to build artistic and performing skills. Private and group classes are available.
+        </p>
+      </div>
+    </div>
+    <div class="row align-items-center service mx-0 mt-2">
+      <div class="col-auto border border-secondary d-flex align-items-center justify-content-center h-100 text-center m-auto thumbnail px-0">
+        <img style="max-width: 100%;" src="/images/thumb.jpg" />
+      </div>
+      <div class="col border border-secondary h-100 ml-2">
+        <h5 class="my-2 underline">
+          <b>
+            <a href="#">EKSPRSA INTENSIVE FITNESS</a>
+          </b>
+        </h5>
+        <p>
+          A signature cardio workout group class with elements of Latin and Modern dance styles. This class is
+          sure to burn calories and put a smile on your face. The class is 55 minutes long.
+        </p>
+      </div>
+    </div>
+    <div class="row align-items-center service mx-0 mt-2">
+      <div class="col-auto border border-secondary d-flex align-items-center justify-content-center h-100 text-center m-auto thumbnail px-0">
+        <img style="max-width: 100%;" src="/images/thumb.jpg" />
+      </div>
+      <div class="col border border-secondary h-100 ml-2">
+        <h5 class="my-2 underline">
+          <b>
+            <a href="#">SOCIAL PRACTICE PARTY</a>
+          </b>
+        </h5>
+        <p>
+          We play all ballroom and latin music including: Salsa, Merenge, Swing, Hustle, Tango, Waltz,
+          Foxtrot, Cha-Cha- Cha and more. The best way to practice and celebrate what you learn. Stay tuned
+          for news about our next party.
+        </p>
+      </div>
+    </div>
+
+    <h5 class="text-center lead-description text-uppercase">
+      <b>
+        <a name="contact">Contact</a>
+      </b>
+    </h5>
+    <div class="row">
+      <div class="col-auto">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d12101.114580356882!2d-73.9065882!3d40.68986045!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1516609021717" width="360" height="360" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+      <div class="col d-flex flex-column align-items-center justify-content-center">
+        <p>CALL: 917.916.5400</p>
+        <p>EMAIL: exprsa@gmail.com</p>
+        <p>Long Island City, NY, 11109</p>
+      </div>
+    </div>
+  </div>
 </section>
 
     </section>
@@ -236,13 +244,29 @@
 	</section>
 
 	<script>
+		var i = 2;
+		var mouseOver = false;
+
+		mouseOverStatus = function() {
+				mouseOver = true;
+		}
+
+		mouseOutStatus = function() {
+				mouseOver = false;
+		}
+		
 		setInterval(function() {
-			var $curr = $('#slider1 input[type=radio]:checked');  
-			var $next = $curr.next('input');
-			if(!$next.length) $next = $('#slider1 input[type=radio]').first();
-			$next.prop('checked', true);
-			
+			if (i <= 4 && !mouseOver) {
+				document.querySelector(".slide" + i).classList.add('active');
+				i++;
+			} else if (i > 4 && !mouseOver) {
+				i = 2;
+				document.querySelector(".slide2").classList.remove('active');
+				document.querySelector(".slide3").classList.remove('active');
+				document.querySelector(".slide4").classList.remove('active');
+			}
 		}, 10000);
+
 	</script>
 </footer>
 </body>
