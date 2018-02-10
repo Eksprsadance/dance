@@ -1,0 +1,52 @@
+---
+layout: home-page
+---
+
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
+    <title>{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+
+    <link rel="stylesheet" href="{{site.baseurl}}/css/styles.css">
+    <link rel="canonical" href="http://example.com/">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="http://example.com/feed.xml">
+</head>
+
+<body style="height: 100%; margin: 0 auto; display: flex; flex-direction: column; overflow-x: hidden; background-color: #f4f6f8;">
+
+  {% include header.html %}
+
+  <section class="main" style="flex: 1; overflow: hidden;">
+    <div class="slider text-center position-relative h-100 w-100" onmouseover="mouseOverStatus()" onmouseout="mouseOutStatus()">
+      <div class="slide slide-1 active">
+        <h4 class="text-box">
+          <i style="background: #868e96; padding: 0.25em; border-radius: 2em;">This is a description box for the first slide!</i>
+        </h4>
+      </div>
+      <div class="slide slide-2">
+        <h4 class="text-box">
+          <i style="background: #868e96; padding: 0.25em; border-radius: 2em;">This is a description box for the second slide!</i>
+        </h4>
+      </div>
+      <div class="slide slide-3">
+        <h4 class="text-box">
+          <i style="background: #868e96; padding: 0.25em; border-radius: 2em;">This is a description box for the third slide!</i>
+        </h4>
+      </div>
+      <div class="slide slide-4">
+        <h4 class="text-box">
+          <i style="background: #868e96; padding: 0.25em; border-radius: 2em;">This is a description box for the forth slide!</i>
+        </h4>
+      </div>
+    </div>
+  </section>
+
+	{% include footer.html %}
+</body>
+</html>

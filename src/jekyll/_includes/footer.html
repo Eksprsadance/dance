@@ -1,11 +1,10 @@
 <footer class="footer d-flex">
-	<section style="max-width: 991px;" class="align-self-center m-auto">
+	<section class="align-self-center m-auto">
 		<div class="copyright">
 			<span>Created by Someone &#169 (2017)</span>
 		</div>
 	</section>
-
-	<script>
+	<!--<script>
 		var i = 2;
 		var mouseOver = false;
 
@@ -28,6 +27,20 @@
 				document.querySelector(".slide4").classList.remove('active');
 			}
 		}, 10000);
-
+	</script>-->
+	<script>
+		var i = 2;
+		
+		setInterval(function() {
+ 			if (i > 4) {
+				i = 2;
+				document.querySelector(".slide-2").classList.remove('active');
+				document.querySelector(".slide-3").classList.remove('active');
+				document.querySelector(".slide-4").classList.remove('active');
+			} else {
+				document.querySelector(".slide-" + i).classList.add('active');
+				i++;
+			} 
+		}, 10000);
 	</script>
 </footer>

@@ -1,20 +1,12 @@
 .main {
 
-  .content {
-    margin-top: -2.5em;
-    max-width: 991px; 
-    background-color: $white;
-  }
-
   p {
     font-size: $font-size-lg;
   }
 
   .service {
-    height: 9em;
-
     .thumbnail {
-      min-width: 9em;
+      max-width: 8em;
     }
 
     a {
@@ -32,21 +24,49 @@
 //slider 
 
 .slider {
-  .slide1 {
+  .slide {
     transition: .5s all ease-in;
+    width: 100%;
+    height: 100%;
+
+    .text-box {
+      position: absolute;
+      bottom: 2em;
+      color: white;
+      width: 100%;
+    }
+
+    &.slide-1 {
+      background: url('../images/couple.jpg');
+      background-position: top center;
+      background-size: cover;
+    }
+
+    &.slide-2,
+    &.slide-3,
+    &.slide-4 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-position: top center;
+      background-size: cover;
+      opacity: 0;
+      transition: .5s all ease-in;
+
+      &.active {
+        opacity: 1;
+        transition: .5s all ease-in;
+      }
+    }
   }
 
-  .slide2,
-  .slide3,
-  .slide4 {
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: .5s all ease-in;
-
-    &.active {
-      opacity: 1;
-      transition: .5s all ease-in;
-    }
+  .slide-2 {
+    background: url('../images/fitness.jpg');
+  }
+  .slide-3 {
+    background: url('../images/wedding.jpg');
+  }
+  .slide-4 {
+    background: url('../images/stilleto.jpg');
   }
 }

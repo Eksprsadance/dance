@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: content-page
 ---
 
 <!DOCTYPE html>
@@ -9,28 +9,22 @@ layout: page
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
     <title>{{ site.title }}</title>
     <meta name="description" content="{{ site.description }}">
 
     <link rel="stylesheet" href="{{site.baseurl}}/css/styles.css">
     <link rel="canonical" href="http://example.com/">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="http://example.com/feed.xml">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body style="height: 100%; margin: 0 auto; display: flex; flex-direction: column; overflow-x: hidden; background-color: #f4f6f8;">
 
+  <span class="relative">
 	{% include header.html %}
-
+  </span>
     <section class="main" style="flex: 1;">
-        {% if page.title %}
-            <h3 class="page-title mt-4 my-lg-2">
-                {{page.title}}
-            </h3> 
-        {% endif %}
         {{ content }}
-
     </section>
 
 	{% include footer.html %}

@@ -2864,40 +2864,52 @@ a.text-dark:focus, a.text-dark:hover {
 .invisible {
   visibility: hidden !important; }
 
-.main .content {
-  margin-top: -2.5em;
-  max-width: 991px;
-  background-color: #fff; }
-
 .main p {
   font-size: 1.25rem; }
 
-.main .service {
-  height: 9em; }
-  .main .service .thumbnail {
-    min-width: 9em; }
-  .main .service a {
-    color: #000; }
+.main .service .thumbnail {
+  max-width: 8em; }
+
+.main .service a {
+  color: #000; }
 
 @media (max-width: 768px) {
   .lead-description {
     font-size: 1rem; } }
 
-.slider .slide1 {
-  transition: .5s all ease-in; }
-
-.slider .slide2,
-.slider .slide3,
-.slider .slide4 {
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: .5s all ease-in; }
-  .slider .slide2.active,
-  .slider .slide3.active,
-  .slider .slide4.active {
-    opacity: 1;
+.slider .slide {
+  transition: .5s all ease-in;
+  width: 100%;
+  height: 100%; }
+  .slider .slide .text-box {
+    position: absolute;
+    bottom: 2em;
+    color: white;
+    width: 100%; }
+  .slider .slide.slide-1 {
+    background: url("../images/couple.jpg");
+    background-position: top center;
+    background-size: cover; }
+  .slider .slide.slide-2, .slider .slide.slide-3, .slider .slide.slide-4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: top center;
+    background-size: cover;
+    opacity: 0;
     transition: .5s all ease-in; }
+    .slider .slide.slide-2.active, .slider .slide.slide-3.active, .slider .slide.slide-4.active {
+      opacity: 1;
+      transition: .5s all ease-in; }
+
+.slider .slide-2 {
+  background: url("../images/fitness.jpg"); }
+
+.slider .slide-3 {
+  background: url("../images/wedding.jpg"); }
+
+.slider .slide-4 {
+  background: url("../images/stilleto.jpg"); }
 
 .icon {
   height: 1rem;
@@ -2911,25 +2923,24 @@ a.text-dark:focus, a.text-dark:hover {
   height: 2rem;
   width: 2rem; }
 
+.relative header {
+  width: 100%;
+  position: relative; }
+
 header {
   width: 100%;
   position: absolute;
   z-index: 1020; }
   header > div {
-    background: rgba(250, 250, 250, 0.5); }
-  header .logo-contact {
-    z-index: 1020;
-    font-weight: 700;
-    color: #fff;
-    bottom: 0.3em;
-    left: 1.5em;
-    letter-spacing: 0.095em; }
+    background: rgba(250, 250, 250, 0.7); }
   header nav {
     text-transform: uppercase;
-    font-weight: 700; }
+    font-weight: 700;
+    font-family: 'Spectral SC', serif; }
     header nav a {
       text-decoration: none;
-      color: #000; }
+      color: #000;
+      white-space: nowrap; }
   @media (max-width: 768px) {
     header nav {
       font-size: 0.875rem; } }

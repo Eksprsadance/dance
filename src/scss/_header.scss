@@ -1,28 +1,29 @@
+//relative position is specific for the content pages only
+.relative {
+  header {
+    width: 100%;
+    position: relative;
+  }
+}
+
 header {
   width: 100%;
   position: absolute;
   z-index: $zindex-sticky;
 
   > div {
-    background: rgba(250,250,250,0.5);
-  }
-
-  .logo-contact {
-    z-index: $zindex-sticky;
-    font-weight: $font-weight-bold;
-    color: $white;
-    bottom: 0.3em;
-    left: 1.5em;
-    letter-spacing: 0.095em;
+    background: rgba(250,250,250,0.7);
   }
 
   nav {
     text-transform: uppercase;
     font-weight: $font-weight-bold;
-    
+    font-family: 'Spectral SC', serif;
+
     a {
       text-decoration: none;
       color: $black;
+      white-space: nowrap;
     }
   }
 
