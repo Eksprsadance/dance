@@ -2,7 +2,9 @@
 .relative {
   header {
     width: 100%;
-    position: relative;
+    position: fixed;
+      z-index: $zindex-sticky;
+      top:0;
   }
 }
 
@@ -24,6 +26,7 @@ header {
       text-decoration: none;
       color: $black;
       white-space: nowrap;
+      font-size: 1.15em;
     }
   }
 

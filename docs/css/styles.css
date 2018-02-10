@@ -2868,7 +2868,7 @@ a.text-dark:focus, a.text-dark:hover {
   font-size: 1.25rem; }
 
 .main .service .thumbnail {
-  max-width: 8em; }
+  max-width: 12em; }
 
 .main .service a {
   color: #000; }
@@ -2925,7 +2925,9 @@ a.text-dark:focus, a.text-dark:hover {
 
 .relative header {
   width: 100%;
-  position: relative; }
+  position: fixed;
+  z-index: 1020;
+  top: 0; }
 
 header {
   width: 100%;
@@ -2940,7 +2942,8 @@ header {
     header nav a {
       text-decoration: none;
       color: #000;
-      white-space: nowrap; }
+      white-space: nowrap;
+      font-size: 1.15em; }
   @media (max-width: 768px) {
     header nav {
       font-size: 0.875rem; } }
