@@ -31,9 +31,23 @@
 
     .text-box {
       position: absolute;
-      bottom: 2em;
+      bottom: 1em;
       color: white;
       width: 100%;
+      z-index: 5000;
+      transition: .5s all ease-in;
+
+      &.hidden {
+        bottom: -4em;
+      }
+
+      span {
+        background: rgba(211, 158, 0, 0.66);
+        padding: 1.25em;
+        border-radius: 0.25em 0.25em 0 0;
+        width: 16em;
+        height: 6em;
+      }
     }
 
     &.slide-1 {

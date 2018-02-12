@@ -24,11 +24,11 @@
       </div>
       <nav class="m-md-2 pr-4 mx-auto col d-flex flex-row align-items-end justify-content-center justify-content-lg-end text-center">
         <a class="pr-4" href="/">Home</a>
-        <a class="pr-4" href="/content#about">About Us</a>
-        <a class="pr-4" href="/content#team">Our Team</a>
-        <a class="pr-4" href="/content#events">Events</a>
-        <a class="pr-4" href="/content#services">Services</a>
-        <a class="pr-4" href="/content#contact">Contact Us</a>
+        <a class="pr-4" onclick="scrollNavigate('.about', '/content#about')">About Us</a>
+        <a class="pr-4" onclick="scrollNavigate('.team', '/content#team')">Our Team</a>
+        <a class="pr-4" onclick="scrollNavigate('.events', '/content#events')">Events</a>
+        <a class="pr-4" onclick="scrollNavigate('.services', '/content#services')">Services</a>
+        <a class="pr-4" onclick="scrollNavigate('.contact', '/content#contact')">Contact Us</a>
       </nav>
     </div>
 </header>
@@ -38,7 +38,10 @@
 <section class="content mx-auto py-4" style="max-width: 1200px;">
   <div class="mx-4">
     <h5 class="text-center lead-description text-uppercase">
-      <b><a name="about">About Us</a></b>
+      <b>
+        <a class="span-before" style="margin-top: -12em; position: absolute; opacity: 0;" name="about">p</a>
+        <a class="about" >About Us</a>
+      </b>
     </h5>
     <p class="text-center">
       Eksprsa Dance is a leading dance school in Long Island City, teaching a diverse variety of
@@ -51,7 +54,8 @@
 
     <h5 class="text-center lead-description text-uppercase">
       <b>
-        <a name="team">Our Team</a>
+        <a class="span-before" style="margin-top: -12em; position: absolute; opacity: 0;" name="team">p</a>
+        <a class="team">Our Team</a>
       </b>
     </h5>
     <h5>EKATERINA SIDOROVA</h5>
@@ -84,12 +88,18 @@
     </h6>
 
     <h5 class="text-center lead-description text-uppercase">
-      <b><a name="events">Events</a></b>
+      <b>
+        <a class="span-before" style="margin-top: -12em; position: absolute; opacity: 0;" name="events">p</a>
+        <a class="events">Events</a>
+      </b>
     </h5>
     <img style=" width: 60%;" src="/images/valentine-flyer.jpg" />
 
     <h5 class="text-center lead-description text-uppercase">
-      <b><a name="services">Services</a></b>
+      <b>
+        <a class="span-before" style="margin-top: -12em; position: absolute; opacity: 0;" name="services">p</a>
+        <a class="services">Services</a>
+      </b>
     </h5>
 
     <div class="row align-items-center service mx-0 my-4">
@@ -184,7 +194,8 @@
 
     <h5 class="text-center lead-description text-uppercase">
       <b>
-        <a name="contact">Contact</a>
+        <a class="span-before" style="margin-top: -12em; position: absolute; opacity: 0;" name="contact">p</a>
+        <a class="contact">Contact</a>
       </b>
     </h5>
     <div class="row">
@@ -233,7 +244,6 @@
 	</script>-->
 	<script>
 		var i = 2;
-		
 		setInterval(function() {
  			if (i > 4) {
 				i = 2;
@@ -245,6 +255,20 @@
 				i++;
 			} 
 		}, 10000);
+
+		setTimeout(function() {
+			if (document.querySelector('.text-box')) {
+				document.querySelector(".text-box").classList.remove('hidden');
+			}
+		}, 5000);
+
+		function scrollNavigate(itemClass, itemLink) {
+			if (document.querySelector(itemClass)) {
+					document.querySelector(itemClass).scrollIntoView({ behavior: 'smooth' });
+			} else {
+					window.location.href = itemLink;
+			}
+		}
 	</script>
 </footer>
 </body>

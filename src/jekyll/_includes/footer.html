@@ -30,7 +30,6 @@
 	</script>-->
 	<script>
 		var i = 2;
-		
 		setInterval(function() {
  			if (i > 4) {
 				i = 2;
@@ -42,5 +41,19 @@
 				i++;
 			} 
 		}, 10000);
+
+		setTimeout(function() {
+			if (document.querySelector('.text-box')) {
+				document.querySelector(".text-box").classList.remove('hidden');
+			}
+		}, 5000);
+
+		function scrollNavigate(itemClass, itemLink) {
+			if (document.querySelector(itemClass)) {
+					document.querySelector(itemClass).scrollIntoView({ behavior: 'smooth' });
+			} else {
+					window.location.href = itemLink;
+			}
+		}
 	</script>
 </footer>

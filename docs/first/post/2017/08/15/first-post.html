@@ -23,11 +23,11 @@
       </div>
       <nav class="m-md-2 pr-4 mx-auto col d-flex flex-row align-items-end justify-content-center justify-content-lg-end text-center">
         <a class="pr-4" href="/">Home</a>
-        <a class="pr-4" href="/content#about">About Us</a>
-        <a class="pr-4" href="/content#team">Our Team</a>
-        <a class="pr-4" href="/content#events">Events</a>
-        <a class="pr-4" href="/content#services">Services</a>
-        <a class="pr-4" href="/content#contact">Contact Us</a>
+        <a class="pr-4" onclick="scrollNavigate('.about', '/content#about')">About Us</a>
+        <a class="pr-4" onclick="scrollNavigate('.team', '/content#team')">Our Team</a>
+        <a class="pr-4" onclick="scrollNavigate('.events', '/content#events')">Events</a>
+        <a class="pr-4" onclick="scrollNavigate('.services', '/content#services')">Services</a>
+        <a class="pr-4" onclick="scrollNavigate('.contact', '/content#contact')">Contact Us</a>
       </nav>
     </div>
 </header>
@@ -84,7 +84,6 @@
 	</script>-->
 	<script>
 		var i = 2;
-		
 		setInterval(function() {
  			if (i > 4) {
 				i = 2;
@@ -96,6 +95,20 @@
 				i++;
 			} 
 		}, 10000);
+
+		setTimeout(function() {
+			if (document.querySelector('.text-box')) {
+				document.querySelector(".text-box").classList.remove('hidden');
+			}
+		}, 5000);
+
+		function scrollNavigate(itemClass, itemLink) {
+			if (document.querySelector(itemClass)) {
+					document.querySelector(itemClass).scrollIntoView({ behavior: 'smooth' });
+			} else {
+					window.location.href = itemLink;
+			}
+		}
 	</script>
 </footer>
 </body>
