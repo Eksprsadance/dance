@@ -2953,7 +2953,8 @@ header {
       text-decoration: none;
       color: #000;
       white-space: nowrap;
-      font-size: 1.15em; }
+      font-size: 1.15em;
+      cursor: pointer; }
   @media (max-width: 768px) {
     header nav {
       font-size: 0.875rem; } }
