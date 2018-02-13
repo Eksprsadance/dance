@@ -2885,7 +2885,7 @@ a.text-dark:focus, a.text-dark:hover {
     margin-left: 10%; }
   .main .section-title * {
     background: #d2d8e0;
-    z-index: 1020;
+    z-index: 100;
     position: relative; }
 
 .main .service .thumbnail {
@@ -2955,16 +2955,11 @@ a.text-dark:focus, a.text-dark:hover {
   height: 2rem;
   width: 2rem; }
 
-.relative header {
+header {
   width: 100%;
   position: fixed;
   z-index: 1020;
   top: 0; }
-
-header {
-  width: 100%;
-  position: absolute;
-  z-index: 1020; }
   header > div {
     background: rgba(250, 250, 250, 0.7); }
   header nav {
