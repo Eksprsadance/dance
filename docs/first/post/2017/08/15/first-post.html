@@ -21,7 +21,7 @@
       <div class="col-2 shrink py-2 pl-4 align-self-center text-md-left text-center">
         <img class="m-2 p-md-2" style="height: auto; width: 100%; max-width: 14em;" src="/images/logo-dance.png" />
       </div>
-      <nav class="m-md-2 pr-4 mx-auto col d-flex flex-row align-items-end justify-content-center justify-content-lg-end text-center">
+      <nav class="m-md-2 pr-4 mx-auto col d-flex flex-row align-items-center justify-content-center justify-content-lg-end text-center">
         <a class="pr-4 pointer" href="/">Home</a>
         <a class="pr-4 pointer" onclick="scrollNavigate('.about', '/content#about')">About Us</a>
         <a class="pr-4 pointer" onclick="scrollNavigate('.team', '/content#team')">Our Team</a>
@@ -94,7 +94,7 @@
 				document.querySelector(".slide-" + i).classList.add('active');
 				i++;
 			} 
-		}, 10000);
+		}, 5000);
 
 		setTimeout(function() {
 			if (document.querySelector('.text-box')) {
