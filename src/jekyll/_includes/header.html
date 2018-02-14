@@ -1,15 +1,18 @@
 <header>
     <div class="row mx-auto justify-content-between">
-      <div class="col-2 shrink py-2 pl-4 align-self-center text-md-left text-center">
+      <div class="col-lg-2 col-md-3 col-5 py-2 pl-lg-4 pl-2 align-self-center text-left">
         <img class="m-2 p-md-2" style="height: auto; width: 100%; max-width: 14em;" src="{{site.baseurl}}/images/logo-dance.png" />
       </div>
-      <nav class="m-md-2 pr-4 mx-auto col d-flex flex-row align-items-center justify-content-center justify-content-lg-end text-center">
-        <a class="pr-4 pointer" href="/">Home</a>
-        <a class="pr-4 pointer" onclick="scrollNavigate('.about', '/content#about')">About Us</a>
-        <a class="pr-4 pointer" onclick="scrollNavigate('.team', '/content#team')">Our Team</a>
-        <a class="pr-4 pointer" onclick="scrollNavigate('.events', '/content#events')">Events</a>
-        <a class="pr-4 pointer" onclick="scrollNavigate('.services', '/content#services')">Services</a>
-        <a class="pr-4 pointer" onclick="scrollNavigate('.contact', '/content#contact')">Contact Us</a>
+      <div class="d-flex d-lg-none py-2 pr-4 align-self-center justify-content-end" onclick="openNav()">
+        <img class="mobile-nav-button my-2 p-md-2" src="{{site.baseurl}}/images/mobile-menu-open.png" />
+      </div>
+      <nav class="col-12 col-lg d-flex flex-row flex-wrap p-0 pr-lg-4 mx-auto hidden align-items-center justify-content-center justify-content-lg-end text-center">
+        <a class="col-12 col-sm-5 col-lg-auto py-1" href="/">Home</a>
+        <a class="col-12 col-sm-5 col-lg-auto py-1" onclick="scrollNavigate('.about', '/content#about')">About Us</a>
+        <a class="col-12 col-sm-5 col-lg-auto py-1" onclick="scrollNavigate('.team', '/content#team')">Our Team</a>
+        <a class="col-12 col-sm-5 col-lg-auto py-1" onclick="scrollNavigate('.events', '/content#events')">Events</a>
+        <a class="col-12 col-sm-5 col-lg-auto py-1" onclick="scrollNavigate('.services', '/content#services')">Services</a>
+        <a class="col-12 col-sm-5 col-lg-auto py-1" onclick="scrollNavigate('.contact', '/content#contact')">Contact Us</a>
       </nav>
     </div>
 </header>

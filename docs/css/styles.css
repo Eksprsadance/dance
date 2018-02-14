@@ -2938,10 +2938,13 @@ a.text-dark:focus, a.text-dark:hover {
     bottom: -8em; }
   .slider .text-box .box-container {
     background: rgba(211, 158, 0, 0.75);
-    padding: 1.25em;
+    padding: 1.25em 0;
     border-radius: 0.5em 0.5em 0 0;
-    width: 20em;
+    width: 24em;
     margin: auto; }
+    @media (max-width: 576px) {
+      .slider .text-box .box-container {
+        width: 100%; } }
 
 .icon {
   height: 1rem;
@@ -2965,16 +2968,25 @@ header {
   header nav {
     text-transform: uppercase;
     font-weight: 700;
-    font-family: 'Spectral SC', serif; }
+    font-family: 'Spectral SC', serif;
+    transition: 0.75s all ease-in-out; }
     header nav a {
       text-decoration: none;
       color: #000;
       white-space: nowrap;
       font-size: 1.15em;
       cursor: pointer; }
-  @media (max-width: 768px) {
-    header nav {
-      font-size: 0.875rem; } }
+  header .mobile-nav-button {
+    height: 3em; }
+    @media (max-width: 576px) {
+      header .mobile-nav-button {
+        height: 2.5em; } }
+  @media (max-width: 991px) {
+    header nav.hidden {
+      margin-top: -14em;
+      opacity: 0;
+      z-index: -1;
+      transition: 0.75s all ease-in-out; } }
 
 footer {
   min-height: 2em;
