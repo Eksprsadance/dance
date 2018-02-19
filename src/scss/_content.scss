@@ -10,7 +10,11 @@
     opacity: 0;
   }
 
-
+  .team-photo {
+    @media (max-width: 768px) {
+      max-width: 15em;
+    }
+  }
 
   .section-title {
     width: 100%;
@@ -64,6 +68,12 @@
       background-size: cover;
     }
 
+    &.mobile {
+      background: url('../images/couple-mobile.jpg');
+      background-position: top center;
+      background-size: cover;
+    }
+
     &.slide-2,
     &.slide-3,
     &.slide-4 {
@@ -92,13 +102,14 @@
     background: url('../images/stilleto.jpg');
   }
 
+  .text-box-mobile,
   .text-box {
     color: #ae0505;
     transition: .5s all ease-in;
     position: absolute;
     width: 100%;
     bottom: 0;
-    z-index: $zindex-popover;
+    z-index: $zindex-dropdown;
 
     &.hidden {
       bottom: -8em;

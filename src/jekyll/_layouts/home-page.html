@@ -22,7 +22,7 @@ layout: home-page
 
   {% include header.html %}
 
-  <section class="main" style="flex: 1; overflow: hidden;">
+  <section class="main d-none d-md-block" style="flex: 1; overflow: hidden;">
     <div class="slider text-center position-relative h-100 w-100">
       <div class="slide slide-1 active">
       </div>
@@ -36,6 +36,23 @@ layout: home-page
 
       </div>
       <div class="text-box hidden">
+        <div class="box-container">
+          <h5 class="m-0 p-1">
+            <b>New Client Special!</b>
+          </h5>
+          <h5 class="m-0 p-1">
+            <b>Two Private Lessons for $99</b>
+          </h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- mobile section -->
+  <section class="main d-block d-md-none" style="flex: 1; overflow: hidden;">
+    <div class="slider text-center position-relative h-100 w-100">
+      <div class="slide mobile active"></div>
+      <div class="text-box-mobile hidden">
         <div class="box-container">
           <h5 class="m-0 p-1">
             <b>New Client Special!</b>

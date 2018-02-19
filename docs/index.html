@@ -35,7 +35,7 @@
     </div>
 </header>
 
-  <section class="main" style="flex: 1; overflow: hidden;">
+  <section class="main d-none d-md-block" style="flex: 1; overflow: hidden;">
     <div class="slider text-center position-relative h-100 w-100">
       <div class="slide slide-1 active">
       </div>
@@ -49,6 +49,23 @@
 
       </div>
       <div class="text-box hidden">
+        <div class="box-container">
+          <h5 class="m-0 p-1">
+            <b>New Client Special!</b>
+          </h5>
+          <h5 class="m-0 p-1">
+            <b>Two Private Lessons for $99</b>
+          </h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- mobile section -->
+  <section class="main d-block d-md-none" style="flex: 1; overflow: hidden;">
+    <div class="slider text-center position-relative h-100 w-100">
+      <div class="slide mobile active"></div>
+      <div class="text-box-mobile hidden">
         <div class="box-container">
           <h5 class="m-0 p-1">
             <b>New Client Special!</b>
@@ -94,20 +111,28 @@
 	<script>
 		var i = 2;
 		setInterval(function() {
- 			if (i > 4) {
-				i = 2;
-				document.querySelector(".slide-2").classList.remove('active');
-				document.querySelector(".slide-3").classList.remove('active');
-				document.querySelector(".slide-4").classList.remove('active');
-			} else {
-				document.querySelector(".slide-" + i).classList.add('active');
-				i++;
-			} 
+			if (document.querySelector(".slide-2")) {
+				if (i > 4) {
+					i = 2;
+					document.querySelector(".slide-2").classList.remove('active');
+					document.querySelector(".slide-3").classList.remove('active');
+					document.querySelector(".slide-4").classList.remove('active');
+				} else {
+					document.querySelector(".slide-" + i).classList.add('active');
+					i++;
+				}
+			}
 		}, 5000);
 
 		setTimeout(function() {
 			if (document.querySelector('.text-box')) {
 				document.querySelector(".text-box").classList.remove('hidden');
+			}
+		}, 5000);
+
+		setTimeout(function() {
+			if (document.querySelector('.text-box-mobile')) {
+				document.querySelector(".text-box-mobile").classList.remove('hidden');
 			}
 		}, 5000);
 
@@ -122,6 +147,13 @@
 		function openNav() {
 				document.querySelector("nav").classList.toggle('hidden');
 		}
+
+        emailjs.send("gmail","template_jrSrAXYk",{name: "James", notes: "Check this out!"})
+            .then(function(response) {
+            console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+            }, function(err) {
+            console.log("FAILED. error=", err);
+        });
 	</script>
 </footer>
 </body>

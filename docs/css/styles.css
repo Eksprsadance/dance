@@ -2872,6 +2872,10 @@ a.text-dark:focus, a.text-dark:hover {
   position: absolute;
   opacity: 0; }
 
+@media (max-width: 768px) {
+  .main .team-photo {
+    max-width: 15em; } }
+
 .main .section-title {
   width: 100%;
   position: relative; }
@@ -2906,6 +2910,10 @@ a.text-dark:focus, a.text-dark:hover {
     background: url("../images/couple.jpg");
     background-position: top center;
     background-size: cover; }
+  .slider .slide.mobile {
+    background: url("../images/couple-mobile.jpg");
+    background-position: top center;
+    background-size: cover; }
   .slider .slide.slide-2, .slider .slide.slide-3, .slider .slide.slide-4 {
     position: absolute;
     top: 0;
@@ -2927,15 +2935,18 @@ a.text-dark:focus, a.text-dark:hover {
 .slider .slide-4 {
   background: url("../images/stilleto.jpg"); }
 
+.slider .text-box-mobile,
 .slider .text-box {
   color: #ae0505;
   transition: .5s all ease-in;
   position: absolute;
   width: 100%;
   bottom: 0;
-  z-index: 1060; }
+  z-index: 1000; }
+  .slider .text-box-mobile.hidden,
   .slider .text-box.hidden {
     bottom: -8em; }
+  .slider .text-box-mobile .box-container,
   .slider .text-box .box-container {
     background: rgba(211, 158, 0, 0.75);
     padding: 1.25em 0;
@@ -2943,6 +2954,7 @@ a.text-dark:focus, a.text-dark:hover {
     width: 24em;
     margin: auto; }
     @media (max-width: 576px) {
+      .slider .text-box-mobile .box-container,
       .slider .text-box .box-container {
         width: 100%; } }
 
