@@ -59,20 +59,24 @@
 		function scrollNavigate(itemClass, itemLink) {
 			if (document.querySelector(itemClass)) {
 					document.querySelector(itemClass).scrollIntoView({ behavior: 'smooth' });
+					document.querySelector("nav").classList.add('hidden');
+					document.querySelector(".mobile-nav-button").classList.remove('d-none');
+					document.querySelector(".mobile-nav-button-close").classList.add('d-none');
 			} else {
 					window.location.href = itemLink;
 			}
 		}
 
 		function openNav() {
-				document.querySelector("nav").classList.toggle('hidden');
+				document.querySelector("nav").classList.remove('hidden');
+				document.querySelector(".mobile-nav-button").classList.add('d-none');
+				document.querySelector(".mobile-nav-button-close").classList.remove('d-none');
 		}
 
-        emailjs.send("gmail","template_jrSrAXYk",{name: "James", notes: "Check this out!"})
-            .then(function(response) {
-            console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
-            }, function(err) {
-            console.log("FAILED. error=", err);
-        });
+		function closeNav() {
+				document.querySelector("nav").classList.add('hidden');
+				document.querySelector(".mobile-nav-button").classList.remove('d-none');
+				document.querySelector(".mobile-nav-button-close").classList.add('d-none');
+		}
 	</script>
 </footer>

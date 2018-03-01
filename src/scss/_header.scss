@@ -25,7 +25,8 @@ header {
     }
   }
 
-  .mobile-nav-button {
+  .mobile-nav-button,
+  .mobile-nav-button-close {
     height: 3em;
 
     @media (max-width: 576px) {

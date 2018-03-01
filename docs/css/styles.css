@@ -2988,10 +2988,12 @@ header {
       white-space: nowrap;
       font-size: 1.15em;
       cursor: pointer; }
-  header .mobile-nav-button {
+  header .mobile-nav-button,
+  header .mobile-nav-button-close {
     height: 3em; }
     @media (max-width: 576px) {
-      header .mobile-nav-button {
+      header .mobile-nav-button,
+      header .mobile-nav-button-close {
         height: 2.5em; } }
   @media (max-width: 991px) {
     header nav.hidden {
