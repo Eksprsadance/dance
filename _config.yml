@@ -28,4 +28,4 @@ plugins:
 destination: docs
 source: src/jekyll
 
-keep_files: ['css', 'images', 'js', 'fonts']
+keep_files: ['css', 'images', 'vendor']

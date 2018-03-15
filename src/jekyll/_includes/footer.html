@@ -4,31 +4,32 @@
 			<span>Created by Someone &#169 (2017)</span>
 		</div>
 	</section>
-	<!--<script>
-		var i = 2;
-		var mouseOver = false;
 
-		mouseOverStatus = function() {
-				mouseOver = true;
-		}
-
-		mouseOutStatus = function() {
-				mouseOver = false;
-		}
-		
-		setInterval(function() {
-			if (i <= 4 && !mouseOver) {
-				document.querySelector(".slide" + i).classList.add('active');
-				i++;
-			} else if (i > 4 && !mouseOver) {
-				i = 2;
-				document.querySelector(".slide2").classList.remove('active');
-				document.querySelector(".slide3").classList.remove('active');
-				document.querySelector(".slide4").classList.remove('active');
-			}
-		}, 10000);
-	</script>-->
 	<script>
+		// Contact Form Ajax
+
+		$('#contact-form').submit(function(e) {
+			var name = document.getElementById('name'),
+					email = document.getElementById('email'),
+					message = document.getElementById('message');
+
+			if (!name.value || !email.value || !message.value) {
+				console.log("error with the credentials!!!");
+			} else {
+				$.ajax({
+					url: "https://formspree.io/vortex6688@gmail.com", 
+					method: "POST",
+					data: $(this).serialize(),
+					dataType: "json"
+				});
+
+				e.preventDefault()
+				$(this).get(0).reset()
+				console.log("message sent!!!");
+			}
+		});
+
+		// Animated slider
 		var i = 2;
 		setInterval(function() {
 			if (document.querySelector(".slide-2")) {
@@ -44,6 +45,7 @@
 			}
 		}, 5000);
 
+		//New Client Pop Up Ad
 		setTimeout(function() {
 			if (document.querySelector('.text-box')) {
 				document.querySelector(".text-box").classList.remove('hidden');
@@ -56,6 +58,7 @@
 			}
 		}, 5000);
 
+		// Smooth Scrolling Navigation
 		function scrollNavigate(itemClass, itemLink) {
 			if (document.querySelector(itemClass)) {
 					document.querySelector(itemClass).scrollIntoView({ behavior: 'smooth' });
@@ -67,6 +70,7 @@
 			}
 		}
 
+		// Open and close mobile navigation
 		function openNav() {
 				document.querySelector("nav").classList.remove('hidden');
 				document.querySelector(".mobile-nav-button").classList.add('d-none');

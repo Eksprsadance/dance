@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="/vendor/jquery-3.3.1.min.js"></script>
 
     <title>Eksprsa Dance Ballroom and Latin</title>
     <meta name="description" content="Eksprsa Dance Ballroom and Latin">
@@ -224,28 +224,29 @@
     </h5>
     <a class="section-nav-hook" name="contact">p</a>
     <div class="row align-items-center m-0">
-              <!--<div class="col-12 col-lg-4 p-0">
-
-        <form id="myform" method="post">
-          <label>reply_to</label>
-          <input type="email" name="reply_to" />
-          <label>from_name</label>
-          <input type="text" name="from_name" />
-          <label>message_html</label>
-          <input type="text" name="message_html" />
-          <br><br>
-          <button>
-          Send
-          </button>
-        </form> 
-      </div>-->
+    
       <div class="col-12 col-md-6 p-0">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d12101.114580356882!2d-73.9065882!3d40.68986045!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1516609021717"  frameborder="0" style="border:0; width:100%; height: auto;" allowfullscreen></iframe>
+        <h5 class="text-center">
+          <b>Contact Form</b>
+        </h5>
+        <form id="contact-form" class="d-flex flex-column">
+          <label class="py-2">Your Name</label>
+          <input type="text" name="name" id="name">
+          <label class="py-2">Your Email Address</label>
+          <input type="email" name="email" id="email">
+          <label class="py-2">Your Message</label>
+          <textarea rows="4" type="text" name="message" id="message"></textarea>
+          <input class="my-2 mx-auto col-4" type="submit" value="send">
+          <input type="text" name="_gotcha" style="display:none" />
+        </form>             
       </div>
       <div class="col-12 col-md-6 p-0 d-flex flex-column align-items-center justify-content-center">
         <p>CALL: 917.916.5400</p>
         <p>EMAIL: eksprsa@gmail.com</p>
         <p>Long Island City, NY, 11109</p>
+      </div>    
+      <div class="col-12 px-0 py-4">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d12101.114580356882!2d-73.9065882!3d40.68986045!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1516609021717"  frameborder="0" style="border:0; width:100%; height: auto;" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -258,31 +259,32 @@
 			<span>Created by Someone &#169 (2017)</span>
 		</div>
 	</section>
-	<!--<script>
-		var i = 2;
-		var mouseOver = false;
 
-		mouseOverStatus = function() {
-				mouseOver = true;
-		}
-
-		mouseOutStatus = function() {
-				mouseOver = false;
-		}
-		
-		setInterval(function() {
-			if (i <= 4 && !mouseOver) {
-				document.querySelector(".slide" + i).classList.add('active');
-				i++;
-			} else if (i > 4 && !mouseOver) {
-				i = 2;
-				document.querySelector(".slide2").classList.remove('active');
-				document.querySelector(".slide3").classList.remove('active');
-				document.querySelector(".slide4").classList.remove('active');
-			}
-		}, 10000);
-	</script>-->
 	<script>
+		// Contact Form Ajax
+
+		$('#contact-form').submit(function(e) {
+			var name = document.getElementById('name'),
+					email = document.getElementById('email'),
+					message = document.getElementById('message');
+
+			if (!name.value || !email.value || !message.value) {
+				console.log("error with the credentials!!!");
+			} else {
+				$.ajax({
+					url: "https://formspree.io/vortex6688@gmail.com", 
+					method: "POST",
+					data: $(this).serialize(),
+					dataType: "json"
+				});
+
+				e.preventDefault()
+				$(this).get(0).reset()
+				console.log("message sent!!!");
+			}
+		});
+
+		// Animated slider
 		var i = 2;
 		setInterval(function() {
 			if (document.querySelector(".slide-2")) {
@@ -298,6 +300,7 @@
 			}
 		}, 5000);
 
+		//New Client Pop Up Ad
 		setTimeout(function() {
 			if (document.querySelector('.text-box')) {
 				document.querySelector(".text-box").classList.remove('hidden');
@@ -310,6 +313,7 @@
 			}
 		}, 5000);
 
+		// Smooth Scrolling Navigation
 		function scrollNavigate(itemClass, itemLink) {
 			if (document.querySelector(itemClass)) {
 					document.querySelector(itemClass).scrollIntoView({ behavior: 'smooth' });
@@ -321,6 +325,7 @@
 			}
 		}
 
+		// Open and close mobile navigation
 		function openNav() {
 				document.querySelector("nav").classList.remove('hidden');
 				document.querySelector(".mobile-nav-button").classList.add('d-none');
