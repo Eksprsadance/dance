@@ -2756,7 +2756,8 @@ a.text-dark:hover, a.text-dark:focus {
 .invisible {
   visibility: hidden !important; }
 
-.main p {
+.main p,
+.main a {
   font-size: 1.25rem; }
 
 .main .section-nav-hook {
