@@ -87,29 +87,6 @@
 	</section>
 
 	<script>
-		// Contact Form Ajax
-
-		$('#contact-form').submit(function(e) {
-			var name = document.getElementById('name'),
-					email = document.getElementById('email'),
-					message = document.getElementById('message');
-
-			if (!name.value || !email.value || !message.value) {
-				console.log("error with the credentials!!!");
-			} else {
-				$.ajax({
-					url: "https://formspree.io/vortex6688@gmail.com", 
-					method: "POST",
-					data: $(this).serialize(),
-					dataType: "json"
-				});
-
-				e.preventDefault()
-				$(this).get(0).reset()
-				console.log("message sent!!!");
-			}
-		});
-
 		// Animated slider
 		var i = 2;
 		setInterval(function() {

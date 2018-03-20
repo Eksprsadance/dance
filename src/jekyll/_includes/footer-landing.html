@@ -6,28 +6,34 @@
 	</section>
 
 	<script>
-		// Contact Form Ajax
-
-		$('#contact-form').submit(function(e) {
-			var name = document.getElementById('name'),
-					email = document.getElementById('email'),
-					message = document.getElementById('message');
-
-			if (!name.value || !email.value || !message.value) {
-				console.log("error with the credentials!!!");
-			} else {
-				$.ajax({
-					url: "https://formspree.io/vortex6688@gmail.com", 
-					method: "POST",
-					data: $(this).serialize(),
-					dataType: "json"
-				});
-
-				e.preventDefault()
-				$(this).get(0).reset()
-				console.log("message sent!!!");
+		// Animated slider
+		var i = 2;
+		setInterval(function() {
+			if (document.querySelector(".slide-2")) {
+				if (i > 4) {
+					i = 2;
+					document.querySelector(".slide-2").classList.remove('active');
+					document.querySelector(".slide-3").classList.remove('active');
+					document.querySelector(".slide-4").classList.remove('active');
+				} else {
+					document.querySelector(".slide-" + i).classList.add('active');
+					i++;
+				}
 			}
-		});
+		}, 5000);
+
+		//New Client Pop Up Ad
+		setTimeout(function() {
+			if (document.querySelector('.text-box')) {
+				document.querySelector(".text-box").classList.remove('hidden');
+			}
+		}, 5000);
+
+		setTimeout(function() {
+			if (document.querySelector('.text-box-mobile')) {
+				document.querySelector(".text-box-mobile").classList.remove('hidden');
+			}
+		}, 5000);
 
 		// Smooth Scrolling Navigation
 		function scrollNavigate(itemClass, itemLink) {

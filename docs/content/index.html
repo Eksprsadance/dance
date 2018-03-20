@@ -252,9 +252,6 @@
         <p>EMAIL: eksprsa@gmail.com</p>
         <p>Long Island City, NY, 11109</p>
       </div>    
-      <div class="col-12 px-0 py-4">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d12101.114580356882!2d-73.9065882!3d40.68986045!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1516609021717"  frameborder="0" style="border:0; width:100%; height: auto;" allowfullscreen></iframe>
-      </div>
     </div>
   </div>
 </section>
@@ -290,35 +287,6 @@
 				console.log("message sent!!!");
 			}
 		});
-
-		// Animated slider
-		var i = 2;
-		setInterval(function() {
-			if (document.querySelector(".slide-2")) {
-				if (i > 4) {
-					i = 2;
-					document.querySelector(".slide-2").classList.remove('active');
-					document.querySelector(".slide-3").classList.remove('active');
-					document.querySelector(".slide-4").classList.remove('active');
-				} else {
-					document.querySelector(".slide-" + i).classList.add('active');
-					i++;
-				}
-			}
-		}, 5000);
-
-		//New Client Pop Up Ad
-		setTimeout(function() {
-			if (document.querySelector('.text-box')) {
-				document.querySelector(".text-box").classList.remove('hidden');
-			}
-		}, 5000);
-
-		setTimeout(function() {
-			if (document.querySelector('.text-box-mobile')) {
-				document.querySelector(".text-box-mobile").classList.remove('hidden');
-			}
-		}, 5000);
 
 		// Smooth Scrolling Navigation
 		function scrollNavigate(itemClass, itemLink) {
