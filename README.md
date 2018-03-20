@@ -1,11 +1,11 @@
-# Crop
+# Dance
 
 ## Instruction
 
 ### To get started, there is a few simple steps:
 
 - Open a command line tool and navigate to the folder with the project like so:
-`cd c:\crop`
+`cd c:\dance`
 
 - To build a project, run `gulp`, it will build the project into `docs` folder and start the website in your browser automatically
 
@@ -19,4 +19,4 @@ If website did not open or you close the browser tab and need to reopen it in a 
 </span>
 
 ##Uploading updated files to a hosting:
-- In a project folder `c:\crop` navigate inside the `ftp` folder
+- In a project folder `c:\dance` navigate inside the `ftp` folder
