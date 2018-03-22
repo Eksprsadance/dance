@@ -13,8 +13,18 @@
 					email = document.getElementById('email'),
 					message = document.getElementById('message');
 
-			if (!name.value || !email.value || !message.value) {
-				console.log("error with the credentials!!!");
+			if (!name.value) {
+				console.log("Please enter your name...");
+				document.querySelector(".error-sending-message").innerHTML="Please enter your name...";
+				e.preventDefault()
+			} else if (!email.value) {
+				console.log("Email field cannot be empty...");
+				document.querySelector(".error-sending-message").innerHTML="Email field cannot be empty...";
+				e.preventDefault()
+			} else if (!message.value) {
+				console.log("Please enter your message...");
+				document.querySelector(".error-sending-message").innerHTML="Please enter your message...";
+				e.preventDefault()
 			} else {
 				$.ajax({
 					url: "https://formspree.io/vortex6688@gmail.com", 
@@ -26,6 +36,9 @@
 				e.preventDefault()
 				$(this).get(0).reset()
 				console.log("message sent!!!");
+				document.querySelector(".error-sending-message").classList.remove('text-danger');
+				document.querySelector(".error-sending-message").classList.add('text-success');
+				document.querySelector(".error-sending-message").innerHTML="Your Message Has Been Succesfully Sent!!!";
 			}
 		});
 
@@ -49,6 +62,8 @@
 				document.querySelector(".mobile-nav-button").classList.add('d-none');
 				document.querySelector(".mobile-nav-button-close").classList.remove('d-none');
 				document.querySelector(".schedule").classList.remove('shown');
+
+				// make sure scrolling is enabled when schedule is closed and nav is open
 				document.querySelector("body").classList.remove('overflow-y-hidden');
 		}
 
@@ -61,15 +76,19 @@
 		//schedule viewing
 		function viewSchedule() {
 			document.querySelector(".schedule").classList.add('shown');
+
 			//make sure if  mobile nav is open, opening schedule will hide the navigation and the close button
 			document.querySelector("nav").classList.add('hidden');
 			document.querySelector(".mobile-nav-button-close").classList.add('d-none');
 			document.querySelector(".mobile-nav-button").classList.remove('d-none');
+
+			// disable scrolling when the schedule is being viewed
 			document.querySelector("body").classList.add('overflow-y-hidden');
 		}
 
 		function closeSchedule() {
 			document.querySelector(".schedule").classList.remove('shown');
+			// make sure scrolling is enabled when schedule is closed
 			document.querySelector("body").classList.remove('overflow-y-hidden');
 		}
 	</script>
