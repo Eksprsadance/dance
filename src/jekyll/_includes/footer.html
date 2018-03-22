@@ -36,6 +36,7 @@
 					document.querySelector("nav").classList.add('hidden');
 					document.querySelector(".mobile-nav-button").classList.remove('d-none');
 					document.querySelector(".mobile-nav-button-close").classList.add('d-none');
+					document.querySelector(".schedule").classList.remove('shown');
 			} else {
 					window.location.href = itemLink;
 			}
@@ -53,5 +54,17 @@
 				document.querySelector(".mobile-nav-button").classList.remove('d-none');
 				document.querySelector(".mobile-nav-button-close").classList.add('d-none');
 		}
+
+		//schedule viewing
+		function viewSchedule() {
+			document.querySelector(".schedule").classList.add('shown');
+			document.querySelector("nav").classList.add('hidden');
+			document.querySelector(".mobile-nav-button-close").classList.add('d-none');
+			document.querySelector(".mobile-nav-button").classList.remove('d-none');
+		}
+
+		function closeSchedule() {
+			document.querySelector(".schedule").classList.remove('shown');
+		}		
 	</script>
 </footer>

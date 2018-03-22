@@ -1,5 +1,5 @@
 .main {
-
+  padding: 0 1em;
   p,
   a {
     font-size: $font-size-lg;
@@ -45,6 +45,27 @@
 
     a {
       color: $black;
+    }
+  }
+
+  .schedule {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: $zindex-sticky;
+    display: none;
+
+    &.shown {
+      display: flex;
+    }
+
+    .schedule-close-button {
+      border: 0.1em #000 solid;
+      border-radius: 3em;
+      z-index: $zindex-fixed;
+      padding: 0.25em;
+      font-size: $font-size-lg;
     }
   }
 }
@@ -104,7 +125,7 @@
   }
 
   // banner over the slide
-  
+
   .text-box-mobile,
   .text-box {
     color: #ae0505;
