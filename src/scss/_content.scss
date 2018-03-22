@@ -1,8 +1,12 @@
 .main {
-  padding: 0 1em;
+
   p,
   a {
     font-size: $font-size-lg;
+  }
+
+  a {
+    cursor: pointer;
   }
 
   .section-nav-hook {
@@ -151,4 +155,8 @@
       }
     }
   }
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
 }

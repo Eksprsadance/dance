@@ -37,6 +37,7 @@
 					document.querySelector(".mobile-nav-button").classList.remove('d-none');
 					document.querySelector(".mobile-nav-button-close").classList.add('d-none');
 					document.querySelector(".schedule").classList.remove('shown');
+					document.querySelector("body").classList.remove('overflow-y-hidden');
 			} else {
 					window.location.href = itemLink;
 			}
@@ -47,6 +48,8 @@
 				document.querySelector("nav").classList.remove('hidden');
 				document.querySelector(".mobile-nav-button").classList.add('d-none');
 				document.querySelector(".mobile-nav-button-close").classList.remove('d-none');
+				document.querySelector(".schedule").classList.remove('shown');
+				document.querySelector("body").classList.remove('overflow-y-hidden');
 		}
 
 		function closeNav() {
@@ -58,13 +61,16 @@
 		//schedule viewing
 		function viewSchedule() {
 			document.querySelector(".schedule").classList.add('shown');
+			//make sure if  mobile nav is open, opening schedule will hide the navigation and the close button
 			document.querySelector("nav").classList.add('hidden');
 			document.querySelector(".mobile-nav-button-close").classList.add('d-none');
 			document.querySelector(".mobile-nav-button").classList.remove('d-none');
+			document.querySelector("body").classList.add('overflow-y-hidden');
 		}
 
 		function closeSchedule() {
 			document.querySelector(".schedule").classList.remove('shown');
-		}		
+			document.querySelector("body").classList.remove('overflow-y-hidden');
+		}
 	</script>
 </footer>

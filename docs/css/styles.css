@@ -3192,52 +3192,59 @@ a.text-dark:hover, a.text-dark:focus {
 .invisible {
   visibility: hidden !important; }
 
-.main {
-  padding: 0 1em; }
-  .main p,
-  .main a {
-    font-size: 1.25rem; }
-  .main .section-nav-hook {
-    margin-top: -12em;
-    position: absolute;
-    opacity: 0; }
-  @media (max-width: 768px) {
-    .main .team-photo {
-      max-width: 15em; } }
-  .main .section-title {
-    width: 100%;
-    position: relative; }
-    .main .section-title:after {
-      border-bottom: 2px #000 solid;
-      content: '';
-      width: 80%;
-      left: 0;
-      bottom: 50%;
-      position: absolute;
-      margin-left: 10%; }
-    .main .section-title * {
-      background: #d2d8e0;
-      z-index: 100;
-      position: relative; }
-  .main .service .thumbnail {
-    max-width: 12em; }
-  .main .service a {
-    color: #000; }
-  .main .schedule {
-    position: fixed;
+.main p,
+.main a {
+  font-size: 1.25rem; }
+
+.main a {
+  cursor: pointer; }
+
+.main .section-nav-hook {
+  margin-top: -12em;
+  position: absolute;
+  opacity: 0; }
+
+@media (max-width: 768px) {
+  .main .team-photo {
+    max-width: 15em; } }
+
+.main .section-title {
+  width: 100%;
+  position: relative; }
+  .main .section-title:after {
+    border-bottom: 2px #000 solid;
+    content: '';
+    width: 80%;
     left: 0;
-    top: 0;
-    background: rgba(255, 255, 255, 0.8);
-    z-index: 1020;
-    display: none; }
-    .main .schedule.shown {
-      display: flex; }
-    .main .schedule .schedule-close-button {
-      border: 0.1em #000 solid;
-      border-radius: 3em;
-      z-index: 1030;
-      padding: 0.25em;
-      font-size: 1.25rem; }
+    bottom: 50%;
+    position: absolute;
+    margin-left: 10%; }
+  .main .section-title * {
+    background: #d2d8e0;
+    z-index: 100;
+    position: relative; }
+
+.main .service .thumbnail {
+  max-width: 12em; }
+
+.main .service a {
+  color: #000; }
+
+.main .schedule {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 1020;
+  display: none; }
+  .main .schedule.shown {
+    display: flex; }
+  .main .schedule .schedule-close-button {
+    border: 0.1em #000 solid;
+    border-radius: 3em;
+    z-index: 1030;
+    padding: 0.25em;
+    font-size: 1.25rem; }
 
 @media (max-width: 768px) {
   .section-title {
@@ -3298,6 +3305,9 @@ a.text-dark:hover, a.text-dark:focus {
       .slider .text-box-mobile .box-container,
       .slider .text-box .box-container {
         width: 100%; } }
+
+.overflow-y-hidden {
+  overflow-y: hidden; }
 
 .icon {
   height: 1rem;
