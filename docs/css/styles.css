@@ -3354,6 +3354,6 @@ header {
       transition: 0.75s all ease-in-out; } }
 
 footer {
-  min-height: 2em;
+  min-height: 2.5em;
   background: #343a40;
   color: #f8f9fa; }
