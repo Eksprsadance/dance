@@ -84,8 +84,6 @@
 				e.preventDefault()
 				$(this).get(0).reset()
 				console.log("message sent!!!");
-				document.querySelector(".error-sending-message").classList.remove('text-danger');
-				document.querySelector(".error-sending-message").classList.add('text-success');
 				document.querySelector(".error-sending-message").innerHTML="Your Message Has Been Succesfully Sent!!!";
 			}
 		});
@@ -97,8 +95,6 @@
 					document.querySelector("nav").classList.add('hidden');
 					document.querySelector(".mobile-nav-button").classList.remove('d-none');
 					document.querySelector(".mobile-nav-button-close").classList.add('d-none');
-					document.querySelector(".schedule").classList.remove('shown');
-					document.querySelector("body").classList.remove('overflow-y-hidden');
 			} else {
 					window.location.href = itemLink;
 			}
@@ -109,35 +105,12 @@
 				document.querySelector("nav").classList.remove('hidden');
 				document.querySelector(".mobile-nav-button").classList.add('d-none');
 				document.querySelector(".mobile-nav-button-close").classList.remove('d-none');
-				document.querySelector(".schedule").classList.remove('shown');
-
-				// make sure scrolling is enabled when schedule is closed and nav is open
-				document.querySelector("body").classList.remove('overflow-y-hidden');
 		}
 
 		function closeNav() {
 				document.querySelector("nav").classList.add('hidden');
 				document.querySelector(".mobile-nav-button").classList.remove('d-none');
 				document.querySelector(".mobile-nav-button-close").classList.add('d-none');
-		}
-
-		//schedule viewing
-		function viewSchedule() {
-			document.querySelector(".schedule").classList.add('shown');
-
-			//make sure if  mobile nav is open, opening schedule will hide the navigation and the close button
-			document.querySelector("nav").classList.add('hidden');
-			document.querySelector(".mobile-nav-button-close").classList.add('d-none');
-			document.querySelector(".mobile-nav-button").classList.remove('d-none');
-
-			// disable scrolling when the schedule is being viewed
-			document.querySelector("body").classList.add('overflow-y-hidden');
-		}
-
-		function closeSchedule() {
-			document.querySelector(".schedule").classList.remove('shown');
-			// make sure scrolling is enabled when schedule is closed
-			document.querySelector("body").classList.remove('overflow-y-hidden');
 		}
 	</script>
 </footer>
