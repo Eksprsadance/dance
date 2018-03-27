@@ -3230,22 +3230,6 @@ a.text-dark:hover, a.text-dark:focus {
 .main .service a {
   color: #000; }
 
-.main .schedule {
-  position: fixed;
-  left: 0;
-  top: 0;
-  background: rgba(255, 255, 255, 0.8);
-  z-index: 1020;
-  display: none; }
-  .main .schedule.shown {
-    display: flex; }
-  .main .schedule .schedule-close-button {
-    border: 0.1em #000 solid;
-    border-radius: 3em;
-    z-index: 1030;
-    padding: 0.25em;
-    font-size: 1.25rem; }
-
 @media (max-width: 768px) {
   .section-title {
     font-size: 1rem; } }
@@ -3305,9 +3289,6 @@ a.text-dark:hover, a.text-dark:focus {
       .slider .text-box-mobile .box-container,
       .slider .text-box .box-container {
         width: 100%; } }
-
-.overflow-y-hidden {
-  overflow-y: hidden; }
 
 .icon {
   height: 1rem;

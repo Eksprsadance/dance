@@ -93,6 +93,8 @@
 				$(this).get(0).reset()
 				console.log("message sent!!!");
 				document.querySelector(".error-sending-message").innerHTML="Your Message Has Been Succesfully Sent!!!";
+				document.querySelector(".error-sending-message").classList.remove('text-danger');
+				document.querySelector(".error-sending-message").classList.add('text-success');
 			}
 		});
 
