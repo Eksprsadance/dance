@@ -3306,11 +3306,6 @@ iframe.calendar {
   padding: 0.5em;
   background: #e3e9ff;
   border-radius: 0.75em; }
-  iframe.calendar html body {
-    background-color: none !important; }
-
-.calendar-container td.calendar-nav {
-  display: none; }
 
 .icon {
   height: 1rem;

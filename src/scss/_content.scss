@@ -151,16 +151,7 @@ iframe.calendar {
     bottom: 0;
     height: 100%;
     width: 100%;
-    padding: 0.25em;
+    padding: 0.5em;
     background: #e3e9ff;
     border-radius: 0.75em;
-
-    html body {
-      background-color: none !important; 
-    }
-}
-
-//hide calendar nav switch button
-.calendar-container td.calendar-nav {
-  display: none;
 }
