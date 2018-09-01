@@ -14,6 +14,16 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="canonical" href="http://example.com/">
     <link rel="alternate" type="application/rss+xml" title="Eksprsa Dance Ballroom and Latin" href="http://example.com/feed.xml">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119418381-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-119418381-1');
+    </script>
 </head>
 
 <body style="height: 100%; margin: 0 auto; display: flex; flex-direction: column; background-color: #d2d8e0;">
@@ -41,8 +51,8 @@
         <img style="width: 100%;" src="/images/top-bg.jpg" />
 <section class="content mx-auto py-4" style="max-width: 1200px;">
   <a class="section-nav-hook" name="schedule">p</a>
-  <div class="mx-4">
-    <img style="width: 100%; border-radius: 1em;" src="/images/schedule.jpg" />
+  <div class="mx-4 iframe-calendar-container">
+    <iframe class="calendar" src="https://calendar.google.com/calendar/embed?showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23e3e9ff&amp;src=m8snnkq3t7ksqa24q09v6pr6s8%40group.calendar.google.com&amp;color=%235F6B02&amp;ctz=America%2FNew_York" frameborder="0" scrolling="no"></iframe>
   </div>
 </section>
     </section>
@@ -114,6 +124,8 @@
 				document.querySelector(".mobile-nav-button").classList.remove('d-none');
 				document.querySelector(".mobile-nav-button-close").classList.add('d-none');
 		}
+
+		// Calendar proportional scaling
 	</script>
 </footer>
 </body>
