@@ -67,7 +67,7 @@
       <div class="slide slide-4">
 
       </div>
-      <div class="text-box hidden">
+      <!-- <div class="text-box hidden">
         <div class="box-container">
           <h5 class="m-0 p-1">
             <b>New Client Special!</b>
@@ -76,7 +76,7 @@
             <b>Two Private Lessons for $99</b>
           </h5>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 
@@ -84,7 +84,7 @@
   <section class="main d-block d-md-none" style="flex: 1; overflow: hidden;">
     <div class="slider text-center position-relative h-100 w-100">
       <div class="slide mobile active"></div>
-      <div class="text-box-mobile hidden">
+      <!-- <div class="text-box-mobile hidden">
         <div class="box-container">
           <h5 class="m-0 p-1">
             <b>New Client Special!</b>
@@ -93,7 +93,7 @@
             <b>Two Private Lessons for $99</b>
           </h5>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 
@@ -121,18 +121,18 @@
 			}
 		}, 5000);
 
-		//New Client Pop Up Ad
-		setTimeout(function() {
-			if (document.querySelector('.text-box')) {
-				document.querySelector(".text-box").classList.remove('hidden');
-			}
-		}, 5000);
+		//New Client Pop Up Ad (temporarely commented out/disabled, in case we will need different ad banner in the future)
+		// setTimeout(function() {
+		// 	if (document.querySelector('.text-box')) {
+		// 		document.querySelector(".text-box").classList.remove('hidden');
+		// 	}
+		// }, 5000);
 
-		setTimeout(function() {
-			if (document.querySelector('.text-box-mobile')) {
-				document.querySelector(".text-box-mobile").classList.remove('hidden');
-			}
-		}, 5000);
+		// setTimeout(function() {
+		// 	if (document.querySelector('.text-box-mobile')) {
+		// 		document.querySelector(".text-box-mobile").classList.remove('hidden');
+		// 	}
+		// }, 5000);
 
 		// Smooth Scrolling Navigation
 		function scrollNavigate(itemClass, itemLink) {
